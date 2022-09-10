@@ -1,0 +1,31 @@
+
+/* SECTION HOME
+============== */
+
+#home {
+    padding:2rem;
+}
+
+#home .title {
+    font-size: var(--fs-xl);
+}
+
+#home .text {
+    font-size:var(--fs-400);
+}
+
+#home .btn-container {
+    padding-top:var(--padding-600);
+    display:flex;
+    gap:1rem;
+}
+
+#home button {
+    outline:none;
+    border:none;
+    background:none;
+    border:0.1rem solid rgb(30, 33, 42);
+    padding:0.5rem 2rem;
+    border-radius: 10px;
+    font-size:var(--padding-400)
+}

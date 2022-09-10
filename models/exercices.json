@@ -1,0 +1,13 @@
+
+exercices = {
+    "push-up":{
+        "type":"fitness",
+        "muscles":["chest","back","triceps"],
+        "varations":[""],
+    },
+    "squat":{
+        "type":"fitness",
+        "muscles":["legs","glutes"],
+        "variations":["weighted squat"]
+    }
+}

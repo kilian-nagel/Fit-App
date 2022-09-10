@@ -1,1 +1,3 @@
 # Fit-App
+
+App Structure

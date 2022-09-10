@@ -1,0 +1,23 @@
+# Fit-App
+
+App Structure
+
+Models , Views , Controllers.
+
+Models
+users.json
+
+username
+uid
+data 
+    trainings
+        training
+            exercices
+            exercice , sets , reps , break time.
+            exercice , sets , rep , break time
+        type
+            cardio , weight-training ?
+        metadata
+            date
+            number_of_time_training_has_been_completed + when
+    preferred_settings
