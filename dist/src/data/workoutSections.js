@@ -1,78 +1,83 @@
 
 export const workoutSections = [
     {
-        id:'strength',
+        id:'training',
         title:'strength workouts',
         layout:'row',
         cards:[
             {
                 name:'',
+                uid:0,
                 title:'squat killer',
                 icon:'fas fa-flag',
                 content:'type : dumbell , strength',
-                exercices:[
+                exercises:[
                     {name:'weighted squat',sets:3,reps:10,weight:8},
                     {name:'lunges',sets:3,reps:15,weight:0},
                     {name:'weighted squat',sets:3,reps:10,weight:8},
                     {name:'lunges',sets:3,reps:15,weight:0},
                 ],
                 bgColor:'black',
-                bgImage:'',
+                bgImage:'none',
             },
             {
                 name:'',
+                uid:1,
                 title:'explosiveness',
                 icon:'fas fa-bolt',
                 content:'type : explosive , strength',
                 bgColor:'#001F54',
-                bgImage:'',
+                bgImage:'none',
             },
         ]
     },
     {
-        id:'fitness',
+        id:'training',
         title:'fitness workouts',
         layout:'row',
         cards:[
             {
                 name:'',
+                uid:2,
                 title:'strong core',
                 icon:'fas fa-flag',
                 content:'type : bodyweight , core',
                 bgColor:'black',
-                bgImage:'',
+                bgImage:'none',
             },
             {
                 name:'',
+                uid:3,
                 title:'push-up king',
                 icon:'fas fa-bolt',
                 content:'type : bodyweight , chest',
-
                 bgColor:'#001F54',
-                bgImage:'',
+                bgImage:'none',
             },
         ]
     },
     {
-        id:'cardio',
+        id:'training',
         title:'cardio workouts',
         layout:'row',
         cards:[
             {
                 name:'',
+                uid:4,
                 title:'saturday sweat',
-                icon:'fas fa-flag',
+                icon:'',
                 content:'type : cardio',
                 bgColor:'black',
-                bgImage:'',
+                bgImage:'none',
             },
             {
                 name:'',
+                uid:5,
                 title:'jumping jacks streak',
-                icon:'fas fa-bolt',
+                icon:'',
                 content:'type : bodyweight , chest',
                 bgColor:'#001F54',
-                bgImage:'',
+                bgImage:'none',
             },
         ]
     },

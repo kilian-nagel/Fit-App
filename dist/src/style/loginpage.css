@@ -4,6 +4,8 @@
 
 #home {
     padding:2rem;
+    margin:0 auto;
+    max-width: 1250px;
 }
 
 #home .title {
@@ -27,5 +29,5 @@
     border:0.1rem solid rgb(30, 33, 42);
     padding:0.5rem 2rem;
     border-radius: 10px;
-    font-size:var(--padding-400)
+    font-size:var(--padding-400);
 }

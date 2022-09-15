@@ -1,45 +1,91 @@
 import React, { Component, useEffect, useState } from 'react';
 import axios from 'axios';
 import { useAuth0 } from '@auth0/auth0-react';
-import LoginPage from './components/LoginPage.jsx';
-import Header from './components/header.jsx';
+import LoginPage from './components/loginPage.jsx';
 import Navbar from './components/navbar.jsx';
-import Card from './components/card.jsx';
+import Header from './components/header.jsx';
+import Section from './components/section.jsx';
+import Training from './components/training.jsx';
 import {HomeSections} from './data/sections';
 import {workoutSections} from './data/workoutSections';
-import {statsSections} from './data/StatsSections'
-import Section from './components/section.jsx';
+import {statsSections} from './data/statsSections'
 import './style/sections.css'
 
 function App() {
+
+    /* Init
+    =============== */
+
     const {
-        error,
         isAuthenticated,
-        isLoading,
         user
     } = useAuth0();   
 
     const [isLogged,setIsLogged] = useState(false);
     const [userData,setUserData] = useState('');
-    const [currentSection,setCurrentSection] = useState('home');
-    const [stack,setStack] = useState(['home']);
-
+    const [sectionsStack,setSectionsStack] = useState(['home']);
+    const [currentTrainingIndex,setCurrentTrainingIndex] = useState('');
+    const [training,setTraining] = useState({});
+    const [headerText,setHeaderText] = useState(`Hello, ${userData.username}.`)
+    
+    const headerTextHashMap = {
+        'home':`Hello, ${userData.username && userData.username}.`,
+        'activity':'stats',
+        'workouts':'workouts',
+        'training':`${training && training.title}`,
+    }
+    
     const PageSections = {
         'home':HomeSections.map((section,i)=>{return <Section id={section.id} key={i} title={section.title} cards={section.cards} layout={section.layout} changeSection={changeCurrentSection}></Section>}),
 
         'activity':statsSections.map((section,i)=>{return <Section id={section.id} key={i} title={section.title} cards={section.cards} layout={section.layout} changeSection={changeCurrentSection}></Section>}),
 
-        'workouts':workoutSections.map((section,i)=>{return <Section id={section.id} key={i} title={section.title} cards={section.cards} layout={section.layout} changeSection={changeCurrentSection}></Section>
+        'workouts':workoutSections.map((section,i)=>{return <Section id={section.id} key={i} title={section.title} cards={section.cards} layout={section.layout} changeSection={changeCurrentSection} changeTraining={changeTraining}></Section>
         }),
 
-        'food':'',
+        'food':[0].map(x=>{return <Training key={0}></Training>}),
 
-        'training':'',
+        'training':[0].map(x=>{return <Training training={training}></Training>}),
     }
+
+    /* Handling navigation between different sections of the web page 
+    =============== */
+
+    function gotoPreviousSection(){
+        // if we're not already at home section , then we can go to the previous section.
+        if(sectionsStack.length>1){
+            setSectionsStack(sectionsStack.slice(0,sectionsStack.length-1));
+        }
+    }
+
+    function changeCurrentSection(section){
+        setSectionsStack(sectionsStack.concat(section));
+    }
+
+    /* Set exercises for the current training session
+    =============== */
+
+    function changeTraining(uid){
+        setCurrentTrainingIndex(uid);
+    }
+
+    function getTrainingByIndex(index){
+        if(!Number.isFinite(index)){return ''}
+        workoutSections.map(workoutType=>{
+            workoutType.cards.map(workout=>{
+                if(workout.uid===currentTrainingIndex){
+                    setTraining(workout);
+                }
+            })
+        })
+        return 0;
+    }
+
+    /* Endpoint functions
+    ==================== */ 
 
     function login(){
         if(user){
-            console.log('req sent')
             axios.post('http://localhost:5000/auth/login',{
                 username : user.nickname,
                 uid : user.sub
@@ -59,40 +105,34 @@ function App() {
         }
     } 
 
-    function navigateBackward(){
-        if(stack.length>1){
-            setStack(stack.slice(0,stack.length-1));
-        }
-    }
-
-    function changeCurrentSection(section){
-        setStack(stack.concat(section));
-    }
+    useEffect(()=>{
+        console.log(headerTextHashMap[sectionsStack[sectionsStack.length-1]]);
+    },[sectionsStack])
 
     useEffect(()=>{
         login()
     },[user]);
 
     useEffect(()=>{
-        console.log(stack,stack[stack.length-1])
-    })
-
-    useEffect(()=>{
         if(isLogged){
             fetchUserData(user);}
     },[isLogged]);
 
-    const data_to_display = userData && userData.username;
+    useEffect(()=>{
+        if(Number.isFinite(currentTrainingIndex)){
+            getTrainingByIndex(currentTrainingIndex);
+        }
+    },[currentTrainingIndex])
 
     return (  
         isAuthenticated ?
-        <React.Fragment>
-            <Navbar user={userData} handleClick={navigateBackward}></Navbar>
-            <Header user={userData}></Header>
+        <div id="app">
+            <Navbar user={userData} handleClick={gotoPreviousSection}></Navbar>
+            <Header user={userData} text={headerTextHashMap[sectionsStack[sectionsStack.length-1]]}></Header>
             {
-                PageSections[stack[stack.length-1]]
+                PageSections[sectionsStack[sectionsStack.length-1]]
             }
-        </React.Fragment>
+        </div>
         :
         <div>
             <Navbar user={user}></Navbar>

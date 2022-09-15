@@ -18,7 +18,6 @@ function Navbar({user,handleClick}) {
 
     return ( 
         <header id="main-header" className='header'>
-            <p className="title">FitProject</p>
             <div className="btn-container">
                 <p onClick={handleClick}>back</p>
             </div>

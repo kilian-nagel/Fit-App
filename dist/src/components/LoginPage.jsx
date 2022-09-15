@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import LoginButton from './loginButton.js'
-import LogoutButton from './LogoutButton.js';
+import LoginButton from './loginButton.jsx'
+import LogoutButton from './logoutButton.jsx';
 import '../style/style.css';
 import '../style/loginpage.css'
 
