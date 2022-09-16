@@ -43,7 +43,7 @@ router
                     }
                 }
                 users.push(user);
-                users = JSON.stringify(users);
+                users = JSON.stringify(users,null,'\t');
                 fs.writeFile('./models/users.json',users,err=>{
                     if(err) throw err;
                 });

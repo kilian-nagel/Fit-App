@@ -4,7 +4,9 @@ const fs = require('fs');
 const body_parser = require('body-parser');
 const path = require('path')
 const cors = require('cors');
-const users_route = require('./controllers/login.js');
+
+const auth_route = require('./controllers/login.js');
+const users_route = require('./controllers/user.js');
 
 /* Parsers 
 =============== */
@@ -21,9 +23,10 @@ app.use(body_parser.urlencoded({extended:false}));
 /* Routes
 =============== */
 
-app.use('/auth',users_route);
+app.use('/auth',auth_route);
+app.use('/user',users_route);
 
 /* Listen
 =============== */
 
-app.listen(5000)
+app.listen(5000);

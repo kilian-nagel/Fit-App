@@ -5,7 +5,7 @@ import '../style/training.css'
 
 // {name,desc,type,exercises}
 
-function Training({training}) {
+function Training({training,handleTrainingEnd}) {
     const [isTrainingActive,setIsTrainingActive] = useState(false);
     const [exerciseCounter,setExerciseCounter] = useState(0);
     const exercises = training.exercises;
@@ -16,6 +16,7 @@ function Training({training}) {
 
     function incrementCounter(){
         if(exerciseCounter+1>=exercises.length){
+            handleTrainingEnd();
             setIsTrainingActive(false);
             return 0;
         }
@@ -26,16 +27,6 @@ function Training({training}) {
         setExerciseCounter(0);
         setIsTrainingActive(true);
     }
-
-    useEffect(()=>{
-        console.log(training)
-    },[training]);
-
-    useEffect(()=>{
-        if(exercises){
-            console.log('start',exerciseCounter,exercises.length);
-        }
-    },[exerciseCounter])
 
     return ( 
         <div id="training">
