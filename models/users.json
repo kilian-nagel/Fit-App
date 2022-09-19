@@ -143,6 +143,1349 @@
 					"metadata": {
 						"date": "2022-09-16T20:30:23.403Z"
 					}
+				},
+				{
+					"name": "explosiveness",
+					"type": "type : explosive , strength",
+					"exercises": [
+						{
+							"name": "explosive push-up",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "jumping squat",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "jumping lunges",
+							"sets": 3,
+							"reps": 16,
+							"weight": 0
+						},
+						{
+							"name": "explosive push-up",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "jumping squat",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "jumping lunges",
+							"sets": 3,
+							"reps": 16,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:58:37.456Z"
+					}
+				},
+				{
+					"name": "explosiveness",
+					"type": "type : explosive , strength",
+					"exercises": [
+						{
+							"name": "explosive push-up",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "jumping squat",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "jumping lunges",
+							"sets": 3,
+							"reps": 16,
+							"weight": 0
+						},
+						{
+							"name": "explosive push-up",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "jumping squat",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "jumping lunges",
+							"sets": 3,
+							"reps": 16,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:58:37.456Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:59:41.006Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:59:41.006Z"
+					}
+				},
+				{
+					"name": "strong core",
+					"type": "type : bodyweight , core",
+					"exercises": [
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:59:48.173Z"
+					}
+				},
+				{
+					"name": "strong core",
+					"type": "type : bodyweight , core",
+					"exercises": [
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:59:48.173Z"
+					}
+				},
+				{
+					"name": "strong core",
+					"type": "type : bodyweight , core",
+					"exercises": [
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:05:03.737Z"
+					}
+				},
+				{
+					"name": "strong core",
+					"type": "type : bodyweight , core",
+					"exercises": [
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:05:03.737Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:05:17.596Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:05:17.596Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:12:05.783Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:12:05.783Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:12:08.186Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:12:10.514Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-17T10:04:10.292Z"
+					}
+				}
+			],
+			"body": {
+				"weight": [],
+				"bodyfat": []
+			}
+		}
+	},
+	{
+		"username": "nagelkilian05",
+		"uid": "google-oauth2|118171829823269176911",
+		"settings": {
+			"darkmode": false,
+			"layout": "default"
+		},
+		"data": {
+			"trainings": [
+				{
+					"name": "explosiveness",
+					"type": "type : explosive , strength",
+					"exercises": [
+						{
+							"name": "explosive push-up",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "jumping squat",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "jumping lunges",
+							"sets": 3,
+							"reps": 16,
+							"weight": 0
+						},
+						{
+							"name": "explosive push-up",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "jumping squat",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "jumping lunges",
+							"sets": 3,
+							"reps": 16,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:58:37.456Z"
+					}
+				},
+				{
+					"name": "explosiveness",
+					"type": "type : explosive , strength",
+					"exercises": [
+						{
+							"name": "explosive push-up",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "jumping squat",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "jumping lunges",
+							"sets": 3,
+							"reps": 16,
+							"weight": 0
+						},
+						{
+							"name": "explosive push-up",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "jumping squat",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "jumping lunges",
+							"sets": 3,
+							"reps": 16,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:58:37.456Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:59:41.006Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:59:41.006Z"
+					}
+				},
+				{
+					"name": "strong core",
+					"type": "type : bodyweight , core",
+					"exercises": [
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:59:48.173Z"
+					}
+				},
+				{
+					"name": "strong core",
+					"type": "type : bodyweight , core",
+					"exercises": [
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T20:59:48.173Z"
+					}
+				},
+				{
+					"name": "strong core",
+					"type": "type : bodyweight , core",
+					"exercises": [
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:05:03.737Z"
+					}
+				},
+				{
+					"name": "strong core",
+					"type": "type : bodyweight , core",
+					"exercises": [
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						},
+						{
+							"name": "plank",
+							"sets": 3,
+							"reps": "30s",
+							"weight": 0
+						},
+						{
+							"name": "crunch",
+							"sets": 3,
+							"reps": 12,
+							"weight": 0
+						},
+						{
+							"name": "russian twists",
+							"sets": 3,
+							"reps": 20,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:05:03.737Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:05:17.596Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:05:17.596Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:12:05.783Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:12:05.783Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:12:08.186Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-16T21:12:10.514Z"
+					}
+				},
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-17T10:04:10.292Z"
+					}
+				}
+			],
+			"body": {
+				"weight": [],
+				"bodyfat": []
+			}
+		}
+	},
+	{
+		"username": "nagelkilian05",
+		"uid": "google-oauth2|118171829823269176911",
+		"settings": {
+			"darkmode": false,
+			"layout": "default"
+		},
+		"data": {
+			"trainings": [
+				{
+					"name": "squat killer",
+					"type": "type : dumbell , strength",
+					"exercises": [
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						},
+						{
+							"name": "weighted squat",
+							"sets": 3,
+							"reps": 10,
+							"weight": 8
+						},
+						{
+							"name": "lunges",
+							"sets": 3,
+							"reps": 15,
+							"weight": 0
+						}
+					],
+					"metadata": {
+						"date": "2022-09-17T10:04:10.292Z"
+					}
 				}
 			],
 			"body": {
