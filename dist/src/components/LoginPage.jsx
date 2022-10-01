@@ -9,10 +9,10 @@ function LoginPage() {
         <div className="app">
             <section id="home" className="home">
                 <h1 className="title">Get in better shape now</h1>
-                <p className="text">FitProject help you to organize , plan your sessions.</p>
+                <p className="text">FitProject help you to organize , plan your workouts.</p>
                 <div className="btn-container">
-                    <LoginButton>Login</LoginButton>
-                    <LogoutButton>Logout</LogoutButton>
+                    <LoginButton></LoginButton>
+                    <LogoutButton></LogoutButton>
                 </div>
             </section>
         </div>

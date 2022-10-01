@@ -8,8 +8,9 @@ import Section from './components/section.jsx';
 import Training from './components/training.jsx';
 import {HomeSections} from './data/sections';
 import {workoutSections} from './data/workoutSections';
-import {statsSections} from './data/statsSections'
-import './style/sections.css'
+import {statsSections} from './data/statsSections';
+import './style/sections.css';
+
 
 function App() {
 
@@ -26,7 +27,10 @@ function App() {
     const [sectionsStack,setSectionsStack] = useState(['home']);
     const [currentTrainingIndex,setCurrentTrainingIndex] = useState('');
     const [training,setTraining] = useState({});
-    const [headerText,setHeaderText] = useState(`Hello, ${userData.username}.`)
+    const [headerText,setHeaderText] = useState(`Hello, ${userData.username}.`);
+
+    const PRIVATE_KEY = 'ca9cd68c-1107-40f3-b232-0c692a94f31f';
+    const PUBLIC_KEY = 'fpdbxmpy';
     
     const headerTextHashMap = {
         'home':`Hello, ${userData.username && userData.username}.`,
@@ -92,6 +96,9 @@ function App() {
             })
             .then(()=>{
                 setIsLogged(true);
+            })
+            .catch((err)=>{
+                throw err;
             })
         }
     }

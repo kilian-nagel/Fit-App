@@ -9,11 +9,14 @@
 }
 
 #home .title {
-    font-size: var(--fs-xl);
+    font-size: 4rem;
+    line-height: 100%;
+    margin-bottom:0.65rem;
 }
 
 #home .text {
     font-size:var(--fs-400);
+    margin-bottom:3rem;
 }
 
 #home .btn-container {
