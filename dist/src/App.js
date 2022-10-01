@@ -8,9 +8,15 @@ import Section from './components/section.jsx';
 import Training from './components/training.jsx';
 import {HomeSections} from './data/sections';
 import {workoutSections} from './data/workoutSections';
+<<<<<<< HEAD
 import {statsSections} from './data/statsSections';
 import './style/sections.css';
 
+=======
+import {statsSections} from './data/statsSections'
+import {updateUserDataTrainings} from './data/userDataController.js';
+import './style/sections.css'
+>>>>>>> 24b5a33e8875af94896f637a62bf57378d72201b
 
 function App() {
 
@@ -49,7 +55,15 @@ function App() {
 
         'food':[0].map(x=>{return <Training key={0}></Training>}),
 
-        'training':[0].map(x=>{return <Training training={training}></Training>}),
+        'training':[0].map(x=>{return <Training training={training} handleTrainingEnd={()=>{handleTrainingEnd()}}></Training>}),
+    }
+
+    /* Handlers 
+    =============== */
+
+    function handleTrainingEnd(){
+        console.log('hello');
+        updateUserDataTrainings(userData,training);
     }
 
     /* Handling navigation between different sections of the web page 
@@ -111,10 +125,6 @@ function App() {
             })
         }
     } 
-
-    useEffect(()=>{
-        console.log(headerTextHashMap[sectionsStack[sectionsStack.length-1]]);
-    },[sectionsStack])
 
     useEffect(()=>{
         login()
