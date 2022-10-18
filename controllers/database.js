@@ -2,39 +2,56 @@
 const express = require('express');
 const fs = require('fs');
 const router = express.Router();
-const { MongoClient } = require('mongodb-legacy');
-const uri = process.env.MONGODB_CONNECTION_URI;
-const client = new MongoClient(uri);
-const dbName = 'users';
 
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = process.env.MONGODB_CONNECTION_URI;
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 router.route('/login')
     .post(async (req,res)=>{
-      console.log('Req login');
         let doesUserExist = false;
 
         // MongoDB conection.
         await client.connect();
-        console.log('Connected successfully to server');
-        const db = client.db(dbName);
+        const db = client.db('users');
         const collection = db.collection('users');
 
         // Checks if user already exists in db.
-        const query = {"uid":req.body.uid};
-        const cursor = collection.find(query);
-        const values = await cursor.toArray();
+        let query = await collection.find({'uid':req.body.uid});
+        await query.forEach(console.dir);
+        if(query){doesUserExist = true;}
 
-        if(values.body) {
-          console.log('hey')
-          doesUserExist=true
-        };
         // Add user if it doesnt exists.
         if(!doesUserExist){
-          console.log('user does not exists');
           addNewUserToDatabase(collection,req.body);
         }
+
+        await client.close();
+        res.send('ok');
     });
-module.exports = router;
+  
+router
+    .route('/getUserData')
+    .post(async (req,res)=>{
+
+      // Connection and init
+      await client.connect();
+      console.log('here');
+      const db = client.db('users');
+      const collection = db.collection('users');
+      
+      // Find user and its data
+      let cursor = await collection.find({uid:req.body.uid});
+      if(cursor){
+        let user = cursor.forEach(console.dir);
+        console.log(user);
+        res.send(cursor.forEach(console.dir))
+      }
+
+      // End of the requests
+      await client.close();
+      res.end();
+    })
 
 async function addNewUserToDatabase(collection,user){
   let new_user = {
@@ -54,3 +71,5 @@ async function addNewUserToDatabase(collection,user){
   }
   await collection.insertOne(new_user);
 }
+
+module.exports = router;
