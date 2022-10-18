@@ -22,7 +22,6 @@ app.use(body_parser.urlencoded({extended:false}));
 /* Routes
 =============== */
 
-console.log(process.env.MONGODB_CONNECTION_URI);
 app.use('/auth',users_route);
 
 /* Listen

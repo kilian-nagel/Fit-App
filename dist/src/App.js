@@ -1,28 +1,18 @@
 import React, { Component, useEffect, useState } from 'react';
 import axios from 'axios';
 import { useAuth0 } from '@auth0/auth0-react';
-import LoginPage from './components/loginPage.jsx';
+import LoginPage from './components/LoginPage.jsx';
 import Navbar from './components/navbar.jsx';
 import Header from './components/header.jsx';
 import Section from './components/section.jsx';
 import Training from './components/training.jsx';
 import {HomeSections} from './data/sections';
 import {workoutSections} from './data/workoutSections';
-<<<<<<< HEAD
-import {statsSections} from './data/statsSections';
+import {statsSections} from './data/StatsSections'
+import {updateUserDataTrainings} from './data/userDataController.js';
 import './style/sections.css';
 
-=======
-import {statsSections} from './data/statsSections'
-import {updateUserDataTrainings} from './data/userDataController.js';
-import './style/sections.css'
->>>>>>> 24b5a33e8875af94896f637a62bf57378d72201b
-
 function App() {
-
-    /* Init
-    =============== */
-
     const {
         isAuthenticated,
         user
@@ -35,8 +25,8 @@ function App() {
     const [training,setTraining] = useState({});
     const [headerText,setHeaderText] = useState(`Hello, ${userData.username}.`);
 
-    const PRIVATE_KEY = 'ca9cd68c-1107-40f3-b232-0c692a94f31f';
-    const PUBLIC_KEY = 'fpdbxmpy';
+    /*const PRIVATE_KEY = 'ca9cd68c-1107-40f3-b232-0c692a94f31f';
+    const PUBLIC_KEY = 'fpdbxmpy';*/
     
     const headerTextHashMap = {
         'home':`Hello, ${userData.username && userData.username}.`,
@@ -118,21 +108,28 @@ function App() {
     }
     
     function fetchUserData(){
+        console.log('fetching data..')
         if(isLogged){
-            axios.get(`http://localhost:5000/auth/getUserData/${user.sub}`)
+            axios.post(`http://localhost:5000/auth/getUserData`,{uid:user.sub})
             .then(data=>{
+                console.log(data);
                 setUserData(data.data);
             })
         }
     } 
 
     useEffect(()=>{
-        login()
+        console.log(user,isAuthenticated);
+    })
+
+    useEffect(()=>{
+        login();
     },[user]);
 
     useEffect(()=>{
         if(isLogged){
-            fetchUserData(user);}
+            fetchUserData(user);
+        }
     },[isLogged]);
 
     useEffect(()=>{
