@@ -1,57 +1,58 @@
 
+const { query } = require('express');
 const express = require('express');
 const fs = require('fs');
+const { Schema } = require('mongoose');
 const router = express.Router();
-
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const mongoose = require('mongoose');
+const usersModel = require('../models/users.js');
 const uri = process.env.MONGODB_CONNECTION_URI;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+
+mongoose.connect(uri)
+  .then(()=>{console.log('connected.');})
+  .catch((err)=>{console.log(err);})
 
 router.route('/login')
     .post(async (req,res)=>{
-        let doesUserExist = false;
+        // Search if user already in db.
+        let doesUserExist = await usersModel.find({uid:req.body.uid}).catch(err=>{console.log(err)});
+        doesUserExist = Boolean(doesUserExist.length);
 
-        // MongoDB conection.
-        await client.connect();
-        const db = client.db('users');
-        const collection = db.collection('users');
-
-        // Checks if user already exists in db.
-        let query = await collection.find({'uid':req.body.uid});
-        await query.forEach(console.dir);
-        if(query){doesUserExist = true;}
-
+        // Templating user
+        const user = {
+          uid:req.body.uid,
+          a:'a',
+          username:req.body.username,
+          data:{
+            trainings:[],
+            body:{
+              bodyfat:[],
+              weight:[]
+            }
+          },
+          settings:{
+            darkmode:false,
+            layout:'defaut'
+          }
+        };
+        
         // Add user if it doesnt exists.
         if(!doesUserExist){
-          addNewUserToDatabase(collection,req.body);
+          usersModel.create(user)
+          .catch(err=>{
+            console.log(err);
+          });
         }
 
-        await client.close();
-        res.send('ok');
+        res.sendStatus(201);
     });
   
 router
     .route('/getUserData')
     .post(async (req,res)=>{
-
-      // Connection and init
-      await client.connect();
-      console.log('here');
-      const db = client.db('users');
-      const collection = db.collection('users');
-      
-      // Find user and its data
-      let cursor = await collection.find({uid:req.body.uid});
-      if(cursor){
-        let user = cursor.forEach(console.dir);
-        console.log(user);
-        res.send(cursor.forEach(console.dir))
-      }
-
-      // End of the requests
-      await client.close();
-      res.end();
-    })
+      let cursor = await usersModel.find({uid:req.body.uid}).catch(err=>{console.log(err);})
+      if(cursor.length){res.send(cursor[0]);}
+    });
 
 async function addNewUserToDatabase(collection,user){
   let new_user = {
