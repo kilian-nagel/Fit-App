@@ -94,11 +94,13 @@ function App() {
 
     function login(){
         if(user){
+            console.log('user')
             axios.post('http://localhost:5000/auth/login',{
                 username : user.nickname,
                 uid : user.sub
             })
             .then(()=>{
+                console.log('hello');
                 setIsLogged(true);
             })
             .catch((err)=>{
@@ -112,7 +114,7 @@ function App() {
         if(isLogged){
             axios.post(`http://localhost:5000/auth/getUserData`,{uid:user.sub})
             .then(data=>{
-                console.log(data);
+                console.log(data.data);
                 setUserData(data.data);
             })
         }
