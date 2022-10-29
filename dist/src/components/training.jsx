@@ -16,6 +16,7 @@ function Training({training,handleTrainingEnd}) {
 
     function incrementCounter(){
         if(exerciseCounter+1>=exercises.length){
+            console.log('a');
             handleTrainingEnd();
             setIsTrainingActive(false);
             return 0;

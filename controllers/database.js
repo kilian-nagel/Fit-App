@@ -21,7 +21,6 @@ router.route('/login')
         // Templating user
         const user = {
           uid:req.body.uid,
-          a:'a',
           username:req.body.username,
           data:{
             trainings:[],

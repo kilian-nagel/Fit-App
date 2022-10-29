@@ -5,7 +5,8 @@ const body_parser = require('body-parser');
 const path = require('path')
 const cors = require('cors');
 const dotenv = require('dotenv').config();
-const users_route = require('./controllers/database');
+const database_route = require('./controllers/database');
+const users_route = require('./controllers/user');
 
 /* Parsers 
 =============== */
@@ -22,7 +23,8 @@ app.use(body_parser.urlencoded({extended:false}));
 /* Routes
 =============== */
 
-app.use('/auth',users_route);
+app.use('/database',database_route);
+app.use('/user',users_route);
 
 /* Listen
 =============== */

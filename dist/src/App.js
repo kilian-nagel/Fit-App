@@ -24,9 +24,6 @@ function App() {
     const [currentTrainingIndex,setCurrentTrainingIndex] = useState('');
     const [training,setTraining] = useState({});
     const [headerText,setHeaderText] = useState(`Hello, ${userData.username}.`);
-
-    /*const PRIVATE_KEY = 'ca9cd68c-1107-40f3-b232-0c692a94f31f';
-    const PUBLIC_KEY = 'fpdbxmpy';*/
     
     const headerTextHashMap = {
         'home':`Hello, ${userData.username && userData.username}.`,
@@ -89,56 +86,19 @@ function App() {
         return 0;
     }
 
-    /* Endpoint functions
-    ==================== */ 
-
-    function login(){
-        if(user){
-            console.log('user')
-            axios.post('http://localhost:5000/auth/login',{
-                username : user.nickname,
-                uid : user.sub
-            })
-            .then(()=>{
-                console.log('hello');
-                setIsLogged(true);
-            })
-            .catch((err)=>{
-                throw err;
-            })
-        }
-    }
-    
-    function fetchUserData(){
-        console.log('fetching data..')
-        if(isLogged){
-            axios.post(`http://localhost:5000/auth/getUserData`,{uid:user.sub})
-            .then(data=>{
-                console.log(data.data);
-                setUserData(data.data);
-            })
-        }
-    } 
-
     useEffect(()=>{
-        console.log(user,isAuthenticated);
-    })
-
-    useEffect(()=>{
-        login();
+        login(user,setIsLogged);
     },[user]);
 
     useEffect(()=>{
         if(isLogged){
-            fetchUserData(user);
+            fetchUserData(user,setUserData);
         }
     },[isLogged]);
 
     useEffect(()=>{
-        if(Number.isFinite(currentTrainingIndex)){
-            getTrainingByIndex(currentTrainingIndex);
-        }
-    },[currentTrainingIndex])
+        if(Number.isFinite(currentTrainingIndex)){getTrainingByIndex(currentTrainingIndex);}
+    },[currentTrainingIndex]);
 
     return (  
         isAuthenticated ?
@@ -155,6 +115,33 @@ function App() {
             <LoginPage></LoginPage>
         </div>
     );
+}
+
+function login(user,setIsLogged){
+    if(user){
+        axios.post('http://localhost:5000/database/login',{
+            username:user.nickname,
+            uid:user.sub
+        })
+        .then(response=>{
+            setIsLogged(true);
+        })
+        .catch(err=>{
+            throw err;
+        });
+    }
+}
+
+function fetchUserData(user,setUserData){
+    if(user){
+        axios.post('http://localhost:5000/database/getUserData',{
+            uid:user.sub
+        })
+        .then(data=>{
+            console.log(data.data);
+            setUserData(data.data);
+        })
+    }
 }
 
 export default App;
