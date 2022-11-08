@@ -2,10 +2,13 @@
 import React, { Component } from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
-import '../style/navbar.css'
+import { userContext } from '../hooks/userContext';
+import { Outlet, Link } from "react-router-dom";
+import '../style/navbar.css';
 
-function Navbar({user,handleClick}) {
+function Navbar({handleClick}) {
     const [profileDisplay,setProfileDisplay] = useState('none');
+    const {userData,setUserData} = useContext(userContext);
 
     function changeDisplayUserProfille(){
         if(profileDisplay==='flex'){
@@ -19,13 +22,12 @@ function Navbar({user,handleClick}) {
     return ( 
         <header id="main-header" className='header'>
             <div className="btn-container">
-                <p onClick={handleClick}>back</p>
             </div>
             <nav className='nav' style={{position:'relative'}}>
                 <div className='btn-user btn' onClick={changeDisplayUserProfille} style={{position:'relative'}}>
                     <i className="btn btn-user fa-solid fa-user"></i>
                     <div className="profile" style={{display:profileDisplay,position:'absolute',marginTop:10,right:0}}>
-                        <p className='username'>{user ? user.username : 'guest'}</p>
+                        <p className='username'>{userData ? userData.nickname : 'guest'}</p>
                         <button className='btn btn-profile'>your profile</button>
                         <button className='btn btn-logout'>logout</button>
                     </div>

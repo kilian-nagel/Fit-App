@@ -12,4 +12,36 @@ router
         });
     });
 
+router
+    .route('/getUserData')
+    .post(async (req,res)=>{
+        let query = await userModel.findOne({uid:req.body.uid}).catch(err=>{console.log(err);})
+        res.send(query);
+    })
+
+router
+    .route('/createNewUser')
+    .post(async (req,res)=>{
+        const user = {
+            uid:req.body.uid,
+            username:req.body.username,
+            data:{
+              trainings:[],
+              body:{
+                bodyfat:[],
+                weight:[]
+              }
+            },
+            settings:{
+              darkmode:false,
+              layout:'defaut'
+            }
+        };
+        console.log(user);
+        userModel.create(user)
+        .catch(err=>{
+          console.log(err);
+        });
+    })
+
 module.exports = router;

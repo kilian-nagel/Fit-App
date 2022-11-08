@@ -1,14 +1,11 @@
 
 import React, { Component } from 'react';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../media/strength.jpg'
 
-function Card({name,uid,title,bgColor,bgImage,content,icon,changeSection,changeTraining}) {
+function Card({name,title,bgColor,bgImage,content,icon,section}) {
     const hasBgImg = bgImage ? 'linear-gradient(to bottom,rgba(0,0,0,0.45),rgba(0,0,0,0.45))' : '';
-    function handleClick(){
-        changeSection()
-        if(uid!=='' && uid!==undefined){changeTraining(uid)}
-    }
     let style = {
         color:'white',
         backgroundColor:bgColor,
@@ -17,13 +14,15 @@ function Card({name,uid,title,bgColor,bgImage,content,icon,changeSection,changeT
         backgroundSize:'cover',
     }
     return ( 
-        <div className={name+' card '} style={style} onClick={handleClick}>
+    <Link to={section} style={{textDecoration:'none'}}>
+        <div className={name+' card '} style={style}>
             <h2 className="title"><span className={'icon '+icon}></span> {title}</h2>
             <div className="content">
                 <p className="text">{content}</p>
                 <img src="" alt="" className="image" />
             </div>
         </div>
+    </Link>
     );
 }
 
