@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export function updateUserDataTrainings(user,training){
-    console.log('hey');
     let new_training = {
         name:training.title,
         type:training.content,
@@ -10,9 +9,9 @@ export function updateUserDataTrainings(user,training){
             date:new Date(),
         }
     }
-    console.log(new_training);
+    user.data.trainings.push(new_training);
+    console.log(user);
     axios.put('http://localhost:5000/user/updateUserData',{
         user:user,
-        training:new_training,
     });
 }

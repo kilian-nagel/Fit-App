@@ -1,29 +1,47 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const userModel = require('../models/users.js');
 
 router
     .route('/updateUserData')
-    .put((req,res)=>{
-        console.log('hello')
-        training = req.body.training;
+    .put(async (req,res)=>{
+        userModel.updateOne({uid:req.body.user.uid},{$set:{data:req.body.user.data}},(err,doc)=>{
+            if(err) console.log(err);
+            res.send("data send.");
+        });
+    });
 
-        fs.readFile('./models/users.json',(err,data)=>{
-            if (err) throw err
+router
+    .route('/getUserData')
+    .post(async (req,res)=>{
+        let query = await userModel.findOne({uid:req.body.uid}).catch(err=>{console.log(err);})
+        res.send(query);
+    })
 
-            let users = JSON.parse(data);
-            for(let user of users){
-                if(user.uid === req.body.user.uid){
-                    user.data.trainings.push(training);
-                }
+router
+    .route('/createNewUser')
+    .post(async (req,res)=>{
+        const user = {
+            uid:req.body.uid,
+            username:req.body.username,
+            data:{
+              trainings:[],
+              body:{
+                bodyfat:[],
+                weight:[]
+              }
+            },
+            settings:{
+              darkmode:false,
+              layout:'defaut'
             }
-
-            users = JSON.stringify(users,null,'\t');
-            fs.writeFile('./models/users.json',users,(err)=>{
-                if(err) throw err;
-            })
-        })
-
+        };
+        console.log(user);
+        userModel.create(user)
+        .catch(err=>{
+          console.log(err);
+        });
     })
 
 module.exports = router;

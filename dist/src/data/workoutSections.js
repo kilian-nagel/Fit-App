@@ -3,6 +3,7 @@ export const workoutSections = [
     {
         id:'training',
         title:'strength workouts',
+        type:'trainings',
         layout:'row',
         cards:[
             {

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+import { useContext } from 'react';
 import { useEffect } from 'react';
-import '../style/header.css'
+import { userContext } from '../hooks/userContext';
+import '../style/header.css';
 
-function Header({user,text}) {
-    useEffect(()=>{
-        console.log(user);
-    })
+function Header({text}) {
+    const {user,setUser} = useContext(userContext);
     return ( 
         <header id="header">
-            <h1 className="title">{text && text}</h1>
+            <h1 className="title">Hello, {user && user.nickname}</h1>
         </header>
     );
 }
