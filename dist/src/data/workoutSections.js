@@ -3,8 +3,9 @@ export const workoutSections = [
     {
         id:'training',
         title:'strength workouts',
-        type:'trainings',
+        type:'training',
         layout:'row',
+        section:'/training',
         cards:[
             {
                 name:'',
@@ -27,6 +28,12 @@ export const workoutSections = [
                 title:'explosiveness',
                 icon:'fas fa-bolt',
                 content:'type : explosive , strength',
+                exercises:[
+                    {name:'jumping squats',sets:3,reps:10,weight:0},
+                    {name:'stato-dynamic push-ups',sets:3,reps:15,weight:0},
+                    {name:'jumping squats',sets:3,reps:10,weight:0},
+                    {name:'stato-dynanmic push-ups',sets:3,reps:15,weight:0},
+                ],
                 bgColor:'#001F54',
                 bgImage:'none',
             },

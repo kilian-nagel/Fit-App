@@ -7,9 +7,12 @@ import Navbar from './components/navbar.jsx';
 import Training from './components/training.jsx';
 import Home from './components/home.jsx';
 import Trainings from './components/trainings.jsx';
+import Stats from './components/Stats.jsx';
 import {workoutSections} from './data/workoutSections';
 import { userContext } from './hooks/userContext.js';
+import { currentTrainingContext } from './hooks/currentTrainingContext.js';
 import './style/sections.css';
+import { updateUserDataTrainings } from './data/userDataController.js';
 
 function App() {
     const {
@@ -20,42 +23,13 @@ function App() {
     const [userData,setUserData] = useState({});
     const [isLogged,setIsLogged] = useState(false);
     const [sectionsStack,setSectionsStack] = useState(['home']);
-    const [currentTrainingIndex,setCurrentTrainingIndex] = useState('');
+    const [currentTrainingIndex,setCurrentTrainingIndex] = useState({});
     const [training,setTraining] = useState({});
-    
-    const PageSections = {
 
-        'food':[0].map(x=>{return <Training key={0}></Training>}),
-
-        'training':[0].map(x=>{return <Training training={training} handleTrainingEnd={()=>{handleTrainingEnd()}}></Training>}),
-    }
-
-    /* Handlers 
-    =============== */
 
     function handleTrainingEnd(){
-        //updateUserDataTrainings(userData,training);
-    }
-
-    /* Handling navigation between different sections of the web page 
-    =============== */
-
-    function gotoPreviousSection(){
-        // if we're not already at home section , then we can go to the previous section.
-        if(sectionsStack.length>1){
-            setSectionsStack(sectionsStack.slice(0,sectionsStack.length-1));
-        }
-    }
-
-    function changeCurrentSection(section){
-        setSectionsStack(sectionsStack.concat(section));
-    }
-
-    /* Set exercises for the current training session
-    =============== */
-
-    function changeTraining(uid){
-        setCurrentTrainingIndex(uid);
+        console.log(userData);
+        updateUserDataTrainings(userData,training);
     }
 
     function getTrainingByIndex(index){
@@ -71,14 +45,23 @@ function App() {
     }
 
     useEffect(()=>{
+        getTrainingByIndex(currentTrainingIndex);
+    },[currentTrainingIndex])
+
+    useEffect(()=>{
         login(user,setIsLogged);
     },[user]);
 
     useEffect(()=>{
         if(isLogged){
-            fetchUserData(userData,setUserData);
+            fetchUserData(user,userData,setUserData);
+            console.log(userData);
         }
     },[isLogged]);
+
+    useEffect(()=>{
+        console.log(userData);
+    },[userData]);
 
     useEffect(()=>{
         if(Number.isFinite(currentTrainingIndex)){getTrainingByIndex(currentTrainingIndex);}
@@ -86,23 +69,25 @@ function App() {
 
     return (
         isAuthenticated ?
-        <div className="app">
-            <userContext.Provider value={{user,setUserData}}>
-                <BrowserRouter>
-                <Navbar></Navbar>
-                    <Routes>
-                        <Route path="/" element={<Home/>}>
-                        </Route>
-                        <Route path="/trainings" element={<Trainings/>}/>
-                            <Route path="stats"/>
-                            <Route path="recipes"/>
-                        </Routes>
-                </BrowserRouter>
-            </userContext.Provider>
-        </div>
+            <div className="app">
+                <userContext.Provider value={{user,setUserData}}>
+                    <currentTrainingContext.Provider value={{currentTrainingIndex,setCurrentTrainingIndex}}>
+                        <BrowserRouter>
+                            <Navbar isAuthenticated={isAuthenticated}></Navbar>
+                            <Routes>
+                                <Route path="/" element={<Home />} />
+                                <Route path="/trainings" element={<Trainings />} />
+                                <Route path="/stats" element={<Stats/>}/>
+                                <Route path="/recipes" />
+                                <Route path="/training" element={<Training training={training} handleTrainingEnd={handleTrainingEnd}/>}/>
+                            </Routes>
+                        </BrowserRouter>
+                    </currentTrainingContext.Provider>
+                </userContext.Provider>
+            </div>
             :
         <div className="app">
-            <Navbar />
+            <Navbar isAuthenticated={isAuthenticated}/>
             <LoginPage />
         </div>
     );
@@ -123,14 +108,15 @@ function login(user,setIsLogged){
     }
 }
 
-function fetchUserData(user,setUserData){
+function fetchUserData(user,userData,setUserData){
     if(user){
         axios.post('http://localhost:5000/user/getUserData',{
             uid:user.sub
         })
-        .then(data=>{
-            setUserData(user)
-        })
+        .then(async(data)=>{
+            await setUserData(data.data);
+            console.log(userData);
+        })                                                                                                                                                                                                                
     }
 }
 
