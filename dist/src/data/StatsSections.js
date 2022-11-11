@@ -2,7 +2,7 @@
 export const statsSections = [
     {
         id:'sessions',
-        title:'sessions',
+        title:'stats',
         type:'stats',
         layout:'grid',
         cards:[

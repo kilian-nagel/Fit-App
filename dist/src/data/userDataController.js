@@ -9,9 +9,12 @@ export function updateUserDataTrainings(user,training){
             date:new Date(),
         }
     }
-    user.data.trainings.push(new_training);
     console.log(user);
+    user.data.trainings.push(new_training);
     axios.put('http://localhost:5000/user/updateUserData',{
         user:user,
-    });
+    })
+    .catch(err=>{
+        console.log(err);
+    })
 }

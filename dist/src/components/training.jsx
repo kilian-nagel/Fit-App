@@ -2,6 +2,7 @@
 import React, { Component, useState } from 'react';
 import { useEffect } from 'react';
 import '../style/training.css'
+import Header from './header';
 
 // {name,desc,type,exercises}
 
@@ -31,6 +32,7 @@ function Training({training,handleTrainingEnd}) {
 
     return ( 
         <div id="training">
+                <Header></Header>
                 {
                 isTrainingActive ?
                 <div className='session'>            
