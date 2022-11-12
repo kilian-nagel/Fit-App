@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 
 function Navbar({ handleClick, isAuthenticated }) {
     const [profileDisplay, setProfileDisplay] = useState('none');
-    const {user,setUser} = useContext(userContext);
+    const {userData,setUserData} = useContext(userContext);
 
     function changeDisplayUserProfille() {
         if (profileDisplay === 'flex') {
@@ -33,7 +33,7 @@ function Navbar({ handleClick, isAuthenticated }) {
                 <div className='btn-user btn' onClick={changeDisplayUserProfille} style={{ position: 'relative' }}>
                     <i className="btn btn-user fa-solid fa-user"></i>
                     <div className="profile" style={{ display: profileDisplay, position: 'absolute', marginTop: 10, right: 0 }}>
-                        <p className='username'>{user ? user.nickname : 'guest'}</p>
+                        <p className='username'>{userData ? userData.username : 'guest'}</p>
                         <button className='btn btn-profile'>your profile</button>
                         <button className='btn btn-logout'>logout</button>
                     </div>
