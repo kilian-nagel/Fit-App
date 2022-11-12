@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { homeSections } from '../data/homeSections';
 import { workoutSections } from '../data/workoutSections';
-import { statsSections } from '../data/statsSections';
+import { statsSections } from '../data/StatsSections';
 import Header from './header';
 import Section from './section';
 import { userContext } from '../hooks/userContext';

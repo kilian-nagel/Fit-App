@@ -55,13 +55,8 @@ function App() {
     useEffect(()=>{
         if(isLogged){
             fetchUserData(user,userData,setUserData);
-            console.log(userData);
         }
     },[isLogged]);
-
-    useEffect(()=>{
-        console.log(userData);
-    },[userData]);
 
     useEffect(()=>{
         if(Number.isFinite(currentTrainingIndex)){getTrainingByIndex(currentTrainingIndex);}
@@ -70,7 +65,7 @@ function App() {
     return (
         isAuthenticated ?
             <div className="app">
-                <userContext.Provider value={{user,setUserData}}>
+                <userContext.Provider value={{userData,setUserData}}>
                     <currentTrainingContext.Provider value={{currentTrainingIndex,setCurrentTrainingIndex}}>
                         <BrowserRouter>
                             <Navbar isAuthenticated={isAuthenticated}></Navbar>
@@ -115,7 +110,6 @@ function fetchUserData(user,userData,setUserData){
         })
         .then(async(data)=>{
             await setUserData(data.data);
-            console.log(userData);
         })                                                                                                                                                                                                                
     }
 }
