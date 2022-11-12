@@ -2,7 +2,9 @@ import React, { Component, useContext } from 'react';
 
 export const getStatsData = {
     sessions:function (userData){
-        if(userData !== undefined && userData !== null && userData !== {}){
+        console.log(userData);
+        //userData && Object.keys(userData).length === 0 && Object.getPrototypeOf(userData) == Object.prototype
+        if(1){
             const sessionsData = getSessions(userData);
             return `You did ${sessionsData.week} workouts this week.
             You did ${sessionsData.total} workouts in total.
@@ -30,7 +32,7 @@ function getSessions(userData){
     let actual_time = Math.floor(actual_date.getTime() / 1000);
 
     for(let session in sessions){
-        let session_date = sessions[0].metadata.date;
+        let session_date = sessions[session].metadata.date;
         session_date = new Date(session_date);
         console.log(session_date);
         session_date = Math.floor(session_date.getTime() / 1000);
