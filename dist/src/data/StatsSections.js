@@ -16,7 +16,7 @@ export const statsSections = [
             },
             {
                 name:'exercises',
-                title:'burned calories',
+                title:'exercices',
                 icon:'fas fa-bolt',
                 content:'',
                 bgColor:'#001F54',
