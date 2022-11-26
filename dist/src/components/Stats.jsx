@@ -13,7 +13,6 @@ function Stats() {
     statsSections.map((section)=>{
         section.cards.map(card=>{
             let data = getStatsData[card.name].call(null,userData);
-            console.log(getStatsData[card.name]);
             card.content = data;
         })
     })

@@ -28,7 +28,6 @@ function App() {
 
 
     function handleTrainingEnd(){
-        console.log(userData);
         updateUserDataTrainings(userData,training);
     }
 

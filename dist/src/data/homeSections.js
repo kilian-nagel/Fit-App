@@ -3,7 +3,7 @@
 export const homeSections = [
     {
         id:'activity',
-        title:'recent activity',
+        title:'statistics',
         type:'stats',
         layout:'',
         cards:[
@@ -11,15 +11,15 @@ export const homeSections = [
                 name:'sessions',
                 title:'sessions',
                 icon:'fas fa-flag',
-                content:'You exercised 10min today.',
+                content:'See more data about your recent sessions.',
                 bgColor:'black',
                 bgImage:'',
             },
             {
-                name:'calories',
+                name:'exercices',
                 title:'burned calories',
                 icon:'fas fa-bolt',
-                content:'You burn 100calories today.',
+                content:'Find out what is your favorite exercice.',
                 bgColor:'#001F54',
                 bgImage:'',
             },
@@ -27,7 +27,7 @@ export const homeSections = [
                 name:'progression',
                 title:'progression',
                 icon:'fas fa-chart-simple',
-                content:'You gained 1 pound this week',
+                content:'Track your progression , and reach your goals.',
                 bgColor:'#034078',
                 bgImage:'',
             }
@@ -59,7 +59,7 @@ export const homeSections = [
                 name:'progression',
                 title:'cardio workouts',
                 icon:'fas fa-chart-simple',
-                content:'Lose weights , improve cardio system.',
+                content:'Lose weight , improve cardio.',
                 bgColor:'#034078',
                 bgImage:'/cardio.jpg',
             }
