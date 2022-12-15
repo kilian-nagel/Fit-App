@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"node index.js",
-    "start": "cross-env nodemon index.js"
+    "start":"cross-env node index.js",
+    "dev":"cross-env nodemon index.js",
+    "build": "react-scripts build"
   },
   "repository": {
     "type": "git",
