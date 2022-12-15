@@ -4,8 +4,8 @@ export const getStatsData = {
     sessions:function (userData){
         if(1){
             const sessionsData = getSessions(userData);
-            return `You did ${sessionsData.week} workouts this week.
-            You did ${sessionsData.total} workouts in total.
+            return `You did ${sessionsData.week} workout(s) this week.
+            You did ${sessionsData.total} workout(s) in total.
             `;
         } else {
             return 'no data.'
@@ -14,12 +14,12 @@ export const getStatsData = {
     exercises:function(userData){
         const exercises = getMostAndLeastPracticedExercices(userData);
         console.log(exercises);
-        return `The exercice you practiced the most is ${exercises[0][0]} : ${exercises[0][1]} total reps. The exercice you practiced the least is ${exercises[1][0]} : ${exercises[1][1]} total reps.`
+        return `The exercice you practiced the most is ${exercises[0][0]} : ${exercises[0][1]} total rep(s). The exercice you practiced the least is ${exercises[1][0]} : ${exercises[1][1]} total rep(s).`
     },
     progression:function(userData){
         const NbtrainingsDoneThisWeek = getSessions(userData);
         const NbtrainingsDoneLastWeek = getSessionsDonePreviousWeeks(userData,2);
-        return `You did ${NbtrainingsDoneThisWeek.week} trainings this weeks , whereas you did ${NbtrainingsDoneLastWeek.week} last week.`;
+        return `You did ${NbtrainingsDoneThisWeek.week} training(s) this weeks , whereas you did ${NbtrainingsDoneLastWeek.week} last week.`;
     }
 }
 
