@@ -1,6 +1,6 @@
 # Fit-App
 
-Application web pour faire , enregistrer et gérer ces séances de sport.
+Application web pour faire , enregistrer et gérer vos séances de sport.
 
 # Description
 L'application est composée de 3 éléments :
